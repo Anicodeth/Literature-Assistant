@@ -1,4 +1,4 @@
-from ..configurations.palm_configuration import palm, defaults
+from litassist.configurations.palm_configuration import palm, defaults
 
 def generate_text(prompt):
   response = palm.generate_text(
