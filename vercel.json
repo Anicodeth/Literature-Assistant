@@ -1,14 +1,8 @@
 {
     "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python"
-      }
+      {"src": "/litassist/configurations/api_configuration.py", "use": "@now/python"}
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "main.py"
-      }
+      {"src": "/(.*)", "dest": "/litassist/configurations/api_configuration.py"}
     ]
   }
