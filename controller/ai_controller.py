@@ -1,5 +1,9 @@
-from configurations.api_configuration import app
+from ..services.ai_services.literature_service import LitService
+from ..configurations.api_configuration import router
+from fastapi import APIRouter
 
-@app.get("/po/{item_id}")
-def read_item(item_id: int, query_param: str = None):
-    return {"item_id": item_id, "query_param": query_param}
+lit_service = LitService()
+
+@router.get('/ai/poem')
+def get_poem(prompt: str):
+    return lit_service.get_poem(prompt)

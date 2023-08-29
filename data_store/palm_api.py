@@ -1,9 +1,9 @@
 from ..configurations.palm_configuration import palm, defaults
 
-def get_poem(prompt):
+def generate_text(prompt):
   response = palm.generate_text(
   **defaults,
-  prompt= f"Write a poem about '{prompt}'")  
+  prompt= prompt)  
   return response.result
 
 
